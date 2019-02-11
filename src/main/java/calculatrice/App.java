@@ -10,7 +10,7 @@ import org.apache.commons.math3.*;
  
 public class App 
 {
-public static Calculatrice init(Scanner sc) {
+public static int init(Scanner sc) {
 			
 			boolean choix=false;
 			int tmp=-1;
@@ -35,20 +35,21 @@ public static Calculatrice init(Scanner sc) {
 	        	System.out.println("Saisie incorrecte ! Reessayez");
 			}
 		}	
-		Calculatrice cal=null;
-    	if(tmp==0){
-			cal= new calcNormal();
-		}
-		else{
-			cal= new calcScien();
-		}
-		return cal;
+		
+    	
+	return tmp;
 }
 
 	public static void main( String[] args )
     {
 		Scanner sc = new Scanner(System.in);
-		calculatrice cal=init(sc);
+		int i=init(sc);
+		if(i==0){
+			cal= new calcNormal();
+		}
+		else{
+			cal= new calcScien();
+		}
 		while(true){
 		System.out.println("entrez votre calcule");
 		String enter=sc.nextLine();
