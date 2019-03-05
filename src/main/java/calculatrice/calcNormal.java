@@ -1,7 +1,5 @@
 package calculatrice;
 
-import org.apache.commons.math3.*;
-
 
 public class calcNormal {
 
